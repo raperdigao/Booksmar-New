@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raphael Perdigão">
+    <meta name="Description"
+        content="Neste projeto, os alunos terão que criar uma API através do servidor Json-Server que permite a criação de API's Fake. Para isso os alunos irão criar o json-server com dois endpoints, o primeiro para cadastro de usuários e o segundo para cadastro de livros" />
+    <meta name="keywords" content="Adição, edição, exclusão e listagem de livros no acervo" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer src="scrips/scriptslivros.js"></script>
+    <script defer src="scrips/postlivros.js"></script>
+   
+    <title>Sistema de gerenciamento de livros</title>
+</head>
+
+<body>
+    <header class="nav-flex">
+        <nav class="container-grid nav-flex__elements">
+
+            <div class="nav-flex__logo-senai">
+                <img src="./assets/images/LogoBookSmart.PNG" alt="logo senai">
+            </div>
+
+            <div class="nav-flex__links">
+                <ul class="nav-flex__links-list">
+                    <li><a href="index.html">Usuários</a></li>
+                    <li><a href="livros.html">Livros</a></li>
+                    <li><a href="#footer">Contato</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main id="main">
+        <h2>
+            Seja bem vindo ao Projeto - Sistema de gerenciamento de livros
+        </h2>
+
+        <section class="container-grid section-flex">
+            <article class="main-flex">
+                <div class="main-flex__form">
+                    <h2 id="title-form">
+                        Cadastro de Livros
+                    </h2>
+
+
+                    <!-- Primeiro Endpoint: -->
+
+
+                    <form action="" class="main-flex__form-element" id="formValidation">
+                        <div class="main-flex__inputs">
+                            <label for=""> Informe o nome do livro: </label>
+                            <input type="text" placeholder="Ex: Introdução ao Java Script" id="nomeLivro" required>
+                        </div>
+                        <div class="main-flex__inputs">
+                            <label for=""> Informe o autor: </label>
+                            <input type="text" placeholder="Ex: Brendan Eich" id="nomeAutor" required min="1" max="20">
+                        </div>
+                        <div class="main-flex__inputs">
+                            <label for=""> Informe a biografia: </label>
+                            <input type="text" placeholder="Ex: David Flanagan" id="nomeBibliografia" required>
+                        </div>
+                        <div class="main-flex__inputs">
+                            <label for=""> Informe a edição: </label>
+                            <input type="number" placeholder="Ex: 2024" id="edicao" required max="2024">
+                        </div>
+
+                        <div class="main-flex__inputs">
+                            <label for=""> Informe a editora: </label>
+                            <input type="text" placeholder="Ex: Saraiva" id="nomeEditora" required min="1" max="20">
+                        </div>
+
+
+                        <div class="main-flex__button">
+                            <button type="submit" id="btnCadastrar">
+                                Cadastrar o livro
+                            </button>
+                            <button type="reset">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+
+            <!-- Pesquisa de livros por título, autor, categoria, etc. -->
+            <article class="main-flex">
+                <div class="main-flex__listagem-flex">
+                    <h2>
+                        Lista de Livros
+                    </h2>
+
+                    <table class="main-flex__listagem-flex__table">
+                        <thead class="table-cabecalho">
+                            <tr>
+                                <th>Nome do livro</th>
+                                <th>Autor</th>
+                                <th>Biografia</th>
+                                <th>Edição</th>
+                                <th>Editora</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaLivros">
+
+
+                            <!-- Quem vai criar os dados será o JS -->
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="main-flex">
+                <div class="main-flex__listagem-flex">
+
+
+
+
+
+
+
+                    <div class="main-flex__form">
+                        <h2 id="title-form">
+                            Pesquisa de livros
+                        </h2>
+
+
+                        <!-- Primeiro Endpoint: -->
+
+
+                        <form action="" class="main-flex__form-element" id="formValidation">
+
+
+                            <div class="main-flex__inputs">
+                                <label for=""> Informe os dados do livro: </label>
+                                <input type="text" placeholder="Ex: título, autor, categoria" id="pesquisaInput" required
+                                    min="1" max="20">
+                            </div>
+
+
+                            <div class="main-flex__button btn-pesquisar">
+                                <button onclick="pesquisarLivros()" id="btnCadastrar">
+                                    Pesquisar o livro
+                                </button>
+
+                                <div id="livros"></div>
+
+                            </div>
+                        </form>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <table class="main-flex__listagem-flex__table">
+                        <thead class="table-cabecalho">
+                            <tr>
+                                <th>Nome do livro</th>
+                                <th>Autor</th>
+                                <th>Biografia</th>
+                                <th>Edição</th>
+                                <th>Editora</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaLivros">
+
+
+                            <!-- Quem vai criar os dados será o JS -->
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <!-- Fim da pesquisa dos livros -->
+
+
+
+
+            
+        </section>
+    </main>
+
+
+
+    <footer>
+        <section id="footer" class="footer-style__grid container-grid">
+            <article class="informacoes">
+                <h1> Mais informações: </h1>
+
+                <p><strong>Empresa:</strong> BookSmart LTDA</p>
+                <p><strong>Telefone:</strong> (11) 97318-1837</p>
+                <p><strong>Endereço:</strong> Rua Major Freire, 226 - Saúde - SP</p>
+            </article>
+
+            <article class="contato">
+                <h1> Contato:</h1>
+
+                <p><strong>Nome:</strong> Raphael / Everton</p>
+                <p><strong>Telefone:</strong> (11) 97318-1837</p>
+                <p><strong>Email:</strong> ra.perdigao@gmail.com</p>
+            </article>
+        </section>
+    </footer>
+
+
+</body>
+
+
+</html>

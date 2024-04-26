@@ -1,0 +1,110 @@
+{
+  "usuarios": [
+    {
+      "id": "07c8",
+      "nomeUsuario": "tomas jerfeson ",
+      "idade": "24",
+      "endereco": "São Paulo - SP",
+      "email": "evertonrichard444@gmail.com",
+      "telefone": "11968128231"
+    },
+    {
+      "id": "f0a1",
+      "nomeUsuario": "Everton Richard",
+      "idade": "25",
+      "endereco": "Estrada Cata Preta, 279",
+      "email": "evertonrichard333@gmail.com",
+      "telefone": "11968128231"
+    },
+    {
+      "id": "2f75",
+      "nomeUsuario": "tom",
+      "idade": "29",
+      "endereco": "São Paulo - SP",
+      "email": "evertonrichard444@gmail.com",
+      "telefone": "11968128231"
+    },
+    {
+      "id": "fc1d",
+      "nomeUsuario": "Raphael",
+      "idade": "20",
+      "endereco": "Raphael",
+      "email": "Raphael",
+      "telefone": "11"
+    },
+    {
+      "id": "cd3f",
+      "nomeUsuario": "everton ",
+      "idade": "20",
+      "endereco": "rua cocais",
+      "email": "evertonrichard333@gmail.com",
+      "telefone": "11968128231"
+    },
+    {
+      "id": "f3fa",
+      "nomeUsuario": "tomas jerfeson ",
+      "idade": "40",
+      "endereco": "São Paulo - SP",
+      "email": "evertonrichard444@gmail.com",
+      "telefone": "11968128231"
+    },
+    {
+      "id": "8771",
+      "nomeUsuario": "tomas jerfeson ",
+      "idade": "50",
+      "endereco": "São Paulo - SP",
+      "email": "evertonrichard444@gmail.com",
+      "telefone": "11968128231"
+    },
+    {
+      "id": "a477",
+      "nomeUsuario": "Raphael Perdigão",
+      "idade": "40",
+      "endereco": "Rua Alba",
+      "email": "ra.perdigao@gmail.com",
+      "telefone": "11973181837"
+    }
+  ],
+  "livros": [
+    {
+      "id": "8682",
+      "nomeLivro": "Html",
+      "nomeAutor": "Raphael",
+      "nomeBibliografia": "Css",
+      "edicao": "2024",
+      "nomeEditora": "Saraiva"
+    },
+    {
+      "id": "7106",
+      "nomeLivro": "Java Script",
+      "nomeAutor": "Raphael",
+      "nomeBibliografia": "Html",
+      "edicao": "2024",
+      "nomeEditora": "Saraiva"
+    },
+    {
+      "id": "eff3",
+      "nomeLivro": "css",
+      "nomeAutor": "css",
+      "nomeBibliografia": "css",
+      "edicao": "2024",
+      "nomeEditora": "abril"
+    },
+    {
+      "id": "e45a",
+      "nomeLivro": "typescript",
+      "nomeAutor": "Raphael",
+      "nomeBibliografia": "Html",
+      "edicao": "2024",
+      "nomeEditora": "Saraiva"
+    },
+    {
+      "id": "2b8b",
+      "nomeLivro": "Html4.0",
+      "nomeAutor": "Raphael",
+      "nomeBibliografia": "Css",
+      "edicao": "2024",
+      "nomeEditora": "Saraiva"
+    }
+  ]
+}
