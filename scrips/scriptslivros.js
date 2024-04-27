@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             alert(id);
   
             // Modifica o título
-            document.getElementById("title-form").textContent = "Atualizar Usuário";
+            document.getElementById("title-form").textContent = "Atualizar Livro";
             document.getElementById("btnCadastrar").textContent = "Atualizar";
   
             // Preenche os campos com os dados do usuário selecionado
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             document.getElementById("nomeEditora").value = livros.nomeEditora;
   
             // Condição para confirmar atualização do usuário
-            if (window.confirm("Você deseja atualizar o usuário ?")) {
+            if (window.confirm("Você deseja atualizar o livro ?")) {
               document.getElementById("btnCadastrar").removeEventListener("click");
               document.getElementById("btnCadastrar").addEventListener("click", () => {
                 // Lógica para atualizar o usuário
@@ -103,7 +103,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   
 
     
-// // Logica Pesquisar livros
+
+    // // Logica Pesquisar livros
 
     // async function pesqugeisarLivros() {
     //   const termo = document.getElementById('pesquisaInput').value;
@@ -142,8 +143,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     // }
     
     // pesqugeisarLivros();
-
-    
 
     getLivros();
     
