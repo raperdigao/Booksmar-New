@@ -103,48 +103,49 @@ document.addEventListener("DOMContentLoaded", (e) => {
   
 
     
+// // Logica Pesquisar livros
 
-    // Logica Pesquisar livros
+    // async function pesqugeisarLivros() {
+    //   const termo = document.getElementById('pesquisaInput').value;
+    //   const response = await fetch(`http://localhost:8001/livros${termo}`);
+    //   const data = await response.json();
+    //   const livrosDiv = document.getElementById('livros');
+    //   livrosDiv.innerHTML = '';
+    
+    //   if (data.length === 0) {
+    //     livrosDiv.innerHTML = 'Nenhum livro encontrado.';
+    //     return;
+    //   }
+    
+    //   const table = document.createElement('table');
+    //   const headers = ['Título', 'Autor', 'Biografia', 'Edição', 'Editora'];
+    
+    //   const headerRow = document.createElement('tr');
+    //   headers.forEach(headerText => {
+    //     const header = document.createElement('th');
+    //     header.appendChild(document.createTextNode(headerText));
+    //     headerRow.appendChild(header);
+    //   });
+    //   table.appendChild(headerRow);
+    
+    //   data.forEach(livro => {
+    //     const row = document.createElement('tr');
+    //     headers.forEach(header => {
+    //       const cell = document.createElement('td');
+    //       cell.appendChild(document.createTextNode(livro[header.toLowerCase()]));
+    //       row.appendChild(cell);
+    //     });
+    //     table.appendChild(row);
+    //   });
+    
+    //   livrosDiv.appendChild(table);
+    // }
+    
+    // pesqugeisarLivros();
 
-    async function pesqugeisarLivros() {
-      const termo = document.getElementById('pesquisaInput').value;
-      const response = await fetch(`http://localhost:8001/livros${termo}`);
-      const data = await response.json();
-      const livrosDiv = document.getElementById('livros');
-      livrosDiv.innerHTML = '';
-    
-      if (data.length === 0) {
-        livrosDiv.innerHTML = 'Nenhum livro encontrado.';
-        return;
-      }
-    
-      const table = document.createElement('table');
-      const headers = ['Título', 'Autor', 'Biografia', 'Edição', 'Editora'];
-    
-      const headerRow = document.createElement('tr');
-      headers.forEach(headerText => {
-        const header = document.createElement('th');
-        header.appendChild(document.createTextNode(headerText));
-        headerRow.appendChild(header);
-      });
-      table.appendChild(headerRow);
-    
-      data.forEach(livro => {
-        const row = document.createElement('tr');
-        headers.forEach(header => {
-          const cell = document.createElement('td');
-          cell.appendChild(document.createTextNode(livro[header.toLowerCase()]));
-          row.appendChild(cell);
-        });
-        table.appendChild(row);
-      });
-    
-      livrosDiv.appendChild(table);
-    }
-    
     
 
     getLivros();
-    pesqugeisarLivros();
+    
   });
   
